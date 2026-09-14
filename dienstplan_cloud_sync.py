@@ -588,6 +588,52 @@ def find_status_for_name(pdf, target_name_fragment):
     return hits
 
 
+def find_crew_for_kategorie(pdf, kategorie):
+    """Alle Besatzungsmitglieder (Rang, Name) der Spalte, deren Kopfzeile
+    zu `kategorie` passt (z.B. das eigene Schiff) - unabhaengig vom
+    gesuchten Namen. Nur fuer diese Koch-Kopie eingebaut: der Koch soll
+    sehen, wer in seiner Dienstwoche auf demselben Schiff faehrt, um
+    Allergien/Vorlieben zu beruecksichtigen (nicht Teil des Original-
+    Dienstplans)."""
+    ziel_norm = norm(kategorie)
+    besatzung = []
+    for page in pdf.pages:
+        for table in page.find_tables():
+            rows = table.extract()
+            pairs = column_pairs(table)
+            headers = {}
+            for row, meta in zip(rows, table.rows):
+                ncols = len(row)
+                is_header = True
+                any_text = False
+                for i in range(0, ncols, 2):
+                    even = (row[i] or "").strip()
+                    odd = row[i + 1].strip() if i + 1 < ncols and row[i + 1] else ""
+                    if even:
+                        any_text = True
+                        if odd or even.upper() in KNOWN_RANKS:
+                            is_header = False
+                if not any_text:
+                    continue
+                if is_header:
+                    headers = headers_in_band(
+                        page, table, meta.bbox[1], meta.bbox[3], pairs
+                    )
+                    continue
+                for i in range(0, ncols, 2):
+                    if norm(headers.get(i, "")) != ziel_norm:
+                        continue
+                    rang = (row[i] or "").strip()
+                    name = row[i + 1].strip() if i + 1 < ncols and row[i + 1] else ""
+                    if name:
+                        besatzung.append((rang, name))
+    return besatzung
+
+
+def format_besatzung_text(besatzung):
+    return "\n".join(f"{rang} {name}".strip() for rang, name in besatzung)
+
+
 def ics_escape(text):
     return (
         str(text)
@@ -620,6 +666,9 @@ def build_vevent(iso_year, iso_week, entry):
         f"KW {iso_week}/{iso_year}\\, Stand: {ics_escape(stand)}\\, "
         f"Datei: {ics_escape(entry.get('file', '?'))}"
     )
+    besatzung_text = entry.get("besatzung_text")
+    if besatzung_text:
+        beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
     return (
         "BEGIN:VEVENT\r\n"
         f"UID:{uid}\r\n"
@@ -661,6 +710,9 @@ def build_tages_vevents(iso_year, iso_week, entry):
             f"KW {iso_week}/{iso_year}\\, Stand: {ics_escape(stand)}\\, "
             f"Datei: {ics_escape(entry.get('file', '?'))}"
         )
+        besatzung_text = entry.get("besatzung_text")
+        if besatzung_text:
+            beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
         tages_abfahrten = pro_tag.get(tag.strftime("%d.%m.%Y"))
         if tages_abfahrten:
             beschreibung += "\\n\\nAbfahrten:\\n" + ics_escape(tages_abfahrten)
@@ -890,6 +942,10 @@ def main():
         with pdfplumber.open(BytesIO(resp.content)) as pdf:
             d_from, d_to = parse_date_range(pdf)
             hits = find_status_for_name(pdf, TARGET_NAME)
+            besatzung_text = None
+            if hits and ist_schiff(hits[0][0]):
+                besatzung = find_crew_for_kategorie(pdf, hits[0][0])
+                besatzung_text = format_besatzung_text(besatzung)
 
         if not hits:
             print(
@@ -918,6 +974,7 @@ def main():
             "nachbar_links": links,
             "farbe_schiff": farbe,
             "rang": rank,
+            "besatzung_text": besatzung_text,
             "sequence": (prev.get("sequence", 0) + 1) if prev else 0,
         }
         state[key] = entry
