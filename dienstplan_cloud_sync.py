@@ -1021,6 +1021,32 @@ def main():
             f"({rev_text}, Stand {mtime or 'unbekannt'})"
         )
 
+    # Backfill: bestehende Dienstwochen, die noch keine Vorwoche-Besatzung
+    # haben (z.B. weil sie vor Einfuehrung dieses Felds erfasst wurden),
+    # ohne Neu-Download der eigenen Besatzungsliste nachtragen.
+    for key, entry in state.items():
+        if not ist_schiff(entry.get("category", "") or ""):
+            continue
+        if entry.get("vorgaenger_text"):
+            continue
+        vorwoche = prev_week_key(key)
+        vorwoche_gefunden = index.get(
+            tuple(int(p) for p in vorwoche.split("-W"))
+        ) if vorwoche else None
+        if not vorwoche_gefunden:
+            continue
+        _, vw_href, _, _ = vorwoche_gefunden
+        vw_resp = session.get(f"{BASE_URL}/{vw_href}", timeout=30)
+        if vw_resp.status_code != 200 or vw_resp.content[:4] != b"%PDF":
+            continue
+        with pdfplumber.open(BytesIO(vw_resp.content)) as vw_pdf:
+            vorgaenger = find_crew_for_kategorie(vw_pdf, entry["category"])
+        vorgaenger_text = format_besatzung_text(vorgaenger)
+        if vorgaenger_text:
+            entry["vorgaenger_text"] = vorgaenger_text
+            changed = True
+            print(f"KW {key}: Vorwoche-Besatzung nachgetragen (Backfill)")
+
     prune_state(state, PRUNE_WEEKS)
 
     abfahrten_wochen_text = 0
