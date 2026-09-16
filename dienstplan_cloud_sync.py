@@ -669,6 +669,9 @@ def build_vevent(iso_year, iso_week, entry):
     besatzung_text = entry.get("besatzung_text")
     if besatzung_text:
         beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
+    vorgaenger_text = entry.get("vorgaenger_text")
+    if vorgaenger_text:
+        beschreibung += "\\n\\nVorwoche (steigt aus):\\n" + ics_escape(vorgaenger_text)
     return (
         "BEGIN:VEVENT\r\n"
         f"UID:{uid}\r\n"
@@ -713,6 +716,11 @@ def build_tages_vevents(iso_year, iso_week, entry):
         besatzung_text = entry.get("besatzung_text")
         if besatzung_text:
             beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
+        vorgaenger_text = entry.get("vorgaenger_text")
+        if vorgaenger_text:
+            beschreibung += (
+                "\\n\\nVorwoche (steigt aus):\\n" + ics_escape(vorgaenger_text)
+            )
         tages_abfahrten = pro_tag.get(tag.strftime("%d.%m.%Y"))
         if tages_abfahrten:
             beschreibung += "\\n\\nAbfahrten:\\n" + ics_escape(tages_abfahrten)
@@ -737,6 +745,17 @@ def next_week_key(key):
     year, week = key.split("-W")
     try:
         monday = date.fromisocalendar(int(year), int(week), 1) + timedelta(days=7)
+    except ValueError:
+        return None
+    y, w, _ = monday.isocalendar()
+    return f"{y}-W{w:02d}"
+
+
+def prev_week_key(key):
+    """'2026-W39' -> '2026-W38', ueber den Jahreswechsel hinweg."""
+    year, week = key.split("-W")
+    try:
+        monday = date.fromisocalendar(int(year), int(week), 1) - timedelta(days=7)
     except ValueError:
         return None
     y, w, _ = monday.isocalendar()
@@ -947,6 +966,22 @@ def main():
                 besatzung = find_crew_for_kategorie(pdf, hits[0][0])
                 besatzung_text = format_besatzung_text(besatzung)
 
+        vorgaenger_text = None
+        if hits and ist_schiff(hits[0][0]):
+            # Wer war die Woche zuvor auf demselben Schiff an Bord (und
+            # steigt jetzt aus) - eigene Besatzungsliste der Vorwoche.
+            vorwoche = prev_week_key(key)
+            vorwoche_gefunden = index.get(
+                tuple(int(p) for p in vorwoche.split("-W"))
+            ) if vorwoche else None
+            if vorwoche_gefunden:
+                _, vw_href, _, _ = vorwoche_gefunden
+                vw_resp = session.get(f"{BASE_URL}/{vw_href}", timeout=30)
+                if vw_resp.status_code == 200 and vw_resp.content[:4] == b"%PDF":
+                    with pdfplumber.open(BytesIO(vw_resp.content)) as vw_pdf:
+                        vorgaenger = find_crew_for_kategorie(vw_pdf, hits[0][0])
+                        vorgaenger_text = format_besatzung_text(vorgaenger)
+
         if not hits:
             print(
                 f"KW {iso_week}/{iso_year} ({filename}): "
@@ -975,6 +1010,7 @@ def main():
             "farbe_schiff": farbe,
             "rang": rank,
             "besatzung_text": besatzung_text,
+            "vorgaenger_text": vorgaenger_text,
             "sequence": (prev.get("sequence", 0) + 1) if prev else 0,
         }
         state[key] = entry
