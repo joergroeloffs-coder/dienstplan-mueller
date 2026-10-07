@@ -248,12 +248,12 @@ DESCRIPTION:KW 42/2026\, Stand: 2026-09-27 22:55\, Datei: 42KW2026 2. Änderung.
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W45@wdr-besatzungsliste
-DTSTAMP:20261006T075200Z
-LAST-MODIFIED:20261006T075200Z
-SEQUENCE:1
+DTSTAMP:20261007T173500Z
+LAST-MODIFIED:20261007T173500Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261107
 SUMMARY:Dienst auf UTHLANDE
-DESCRIPTION:KW 45/2026\, Stand: 2026-10-06 07:52\, Datei: 45KW2026.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Peters\, Olaf\nNWB Petersen\, Ralf\nNWB Paulsen\, Henrik\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Krauledat\, Norbert\nNEO Silberstein\, Thimo\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Allwörden\, André von\nNW Bohn\, Hauke\nNWB* Moths\, Holger\nAz Skora\, Josse
+DESCRIPTION:KW 45/2026\, Stand: 2026-10-07 17:35\, Datei: 45KW2026 1.Aenderung.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Peters\, Olaf\nNWB Petersen\, Ralf\nNWB Paulsen\, Henrik\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Krauledat\, Norbert\nNEO Silberstein\, Thimo\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Allwörden\, André von\nNW Bohn\, Hauke\nNWB* Moths\, Holger\nAz Skora\, Josse
 END:VEVENT
 END:VCALENDAR
