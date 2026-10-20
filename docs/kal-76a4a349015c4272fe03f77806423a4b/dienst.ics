@@ -256,4 +256,14 @@ DTEND;VALUE=DATE:20261107
 SUMMARY:Dienst auf UTHLANDE
 DESCRIPTION:KW 45/2026\, Stand: 2026-10-15 15:23\, Datei: 45KW2026 4.Aenderung.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Petersen\, Ralf\nNWB Paulsen\, Henrik\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Krauledat\, Norbert\nNEO Silberstein\, Thimo\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Allwörden\, André von\nNW Bohn\, Hauke\nNWB* Moths\, Holger\nAz Skora\, Josse
 END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47@wdr-besatzungsliste
+DTSTAMP:20261019T084700Z
+LAST-MODIFIED:20261019T084700Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261121
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-10-19 08:47\, Datei: 47KW2026.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Gleike\, Falco\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
 END:VCALENDAR
