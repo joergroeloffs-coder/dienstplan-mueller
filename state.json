@@ -218,16 +218,19 @@
     "vorgaenger_text": "NK Blank, Marc\nNEO Kohn, Otis\nTLM Isermann, Tobias\nGSM Peters, Olaf\nNWB Paulsen, Henrik\nNWB Peters, Erk\nNWB* Heidemann, Marcel\nAz Skora, Josse"
   },
   "2026-W48": {
-    "category": null,
-    "date_from": null,
-    "date_to": null,
+    "besatzung_text": null,
+    "category": "Freie Tage",
+    "date_from": "2026-11-20",
+    "date_to": "2026-11-27",
     "farbe_schiff": null,
-    "file": null,
-    "mtime": null,
-    "nachbar_links": null,
-    "rang": null,
-    "sequence": 0,
-    "summary": null
+    "file": "48KW2026.pdf",
+    "mtime": "2026-10-28 05:18",
+    "nachbar_links": "SCHLESWIG - HOLSTEIN",
+    "rang": "NWB*",
+    "revision": 0,
+    "sequence": 1,
+    "summary": "Freie Tage",
+    "vorgaenger_text": null
   },
   "2026-W49": {
     "category": null,
