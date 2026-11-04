@@ -336,4 +336,14 @@ DTEND;VALUE=DATE:20261121
 SUMMARY:Dienst auf UTHLANDE
 DESCRIPTION:KW 47/2026\, Stand: 2026-10-25 11:24\, Datei: 47KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Gleike\, Falco\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
 END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W49@wdr-besatzungsliste
+DTSTAMP:20261104T062800Z
+LAST-MODIFIED:20261104T062800Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261205
+SUMMARY:Dienst auf SCHLESWIG - HOLSTEIN
+DESCRIPTION:KW 49/2026\, Stand: 2026-11-04 06:28\, Datei: 49KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Hellmann\, Johann-Eck\nNEO Donau\, Markus\nTLM Erichsen\, Torge\nTWO Wassmann\, Simon\nNWB Matthiesen\, Stephan\nNWB Wendt\, Katja\nNWB* Müller\, Jan\nAz Döhmen\, Simon\n\nVorwoche (steigt aus):\nNK Helms\, Leander\nNEO Schäfer\, Hagen\nTLM Kohn\, Marco\nGSM Petersen\, Dennis\nNWB Porath\, Ingo\nNWB Hansen\, Frithjof\nNWB* Benmerad\, Reda
+END:VEVENT
 END:VCALENDAR
