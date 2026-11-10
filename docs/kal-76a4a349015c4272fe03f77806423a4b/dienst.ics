@@ -327,14 +327,84 @@ SUMMARY:Dienst auf UTHLANDE
 DESCRIPTION:KW 45/2026\, Stand: 2026-10-15 15:23\, Datei: 45KW2026 4.Aenderung.pdf\n\nAbfahrten:\nHW 11:48 / NW 5:58 / NW 18:40\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n20:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Petersen\, Ralf\nNWB Paulsen\, Henrik\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Krauledat\, Norbert\nNEO Silberstein\, Thimo\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Allwörden\, André von\nNW Bohn\, Hauke\nNWB* Moths\, Holger\nAz Skora\, Josse
 END:VEVENT
 BEGIN:VEVENT
-UID:dienstplan-2026-W47@wdr-besatzungsliste
+UID:dienstplan-2026-W47-20261113@wdr-besatzungsliste
 DTSTAMP:20261105T061000Z
 LAST-MODIFIED:20261105T061000Z
 SEQUENCE:3
 DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 3:56 / NW 10:39 / HW 16:17 / NW 22:45\n6:10 Dagebüll-Wyk\n8:20 Wyk-Dagebüll\n9:35 Dagebüll-Wyk\n10:35 Wyk-Wittdün\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n20:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261114@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 4:27 / NW 11:11 / HW 16:49 / NW 23:14\n7:10 Wittdün-Wyk\n8:20 Wyk-Dagebüll\n9:35 Dagebüll-Wyk\n10:35 Wyk-Wittdün\n12:05 Wittdün-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261115@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 4:58 / NW 11:44 / HW 17:22 / NW 23:44\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261116@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 5:32 / HW 18:00 / NW 12:20\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261117@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 6:15 / NW 0:22 / HW 18:50 / NW 13:05\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261118@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 7:12 / NW 1:14 / HW 19:55 / NW 14:04\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261119@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 8:24 / NW 2:23 / HW 21:12 / NW 15:17\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W47-20261120@wdr-besatzungsliste
+DTSTAMP:20261105T061000Z
+LAST-MODIFIED:20261105T061000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Dienst auf UTHLANDE
-DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
+DESCRIPTION:KW 47/2026\, Stand: 2026-11-05 06:10\, Datei: 47KW2026 2. Änderung.pdf\n\nAbfahrten:\nHW 9:40 / NW 3:42 / HW 22:25 / NW 16:31\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n20:40 Wyk-Wittdün\n\nBesatzung:\nNK Sander\, Maximilian\nNEO Hacht\, Ole von\nTLM Petersen\, Lukas\nGSM Romischke\, Willi\nNWB Bersuch\, Sören\nNWB Woydack\, Ole\nNWB* Müller\, Jan\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Kohn\, Otis\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Paulsen\, Henrik\nNWB Peters\, Erk\nNWB* Heidemann\, Marcel\nAz Skora\, Josse
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W49@wdr-besatzungsliste
